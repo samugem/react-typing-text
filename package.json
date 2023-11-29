@@ -1,16 +1,17 @@
 {
   "name": "react-typing-text",
   "version": "1.0.0",
-  "main": "src/TypingText.js",
+  "main": "lib/TypingText.js",
   "scripts": {
-    "build": "babel src -d src"
+    "build": "babel ./src --out-dir ./lib --source-maps --copy-files"
   },
   "peerDependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
   "files": [
-    "src"
+    "src",
+    "lib"
   ],
   "keywords": [
     "react",
@@ -27,6 +28,7 @@
   "devDependencies": {
     "@babel/cli": "^7.23.4",
     "@babel/core": "^7.23.5",
-    "@babel/preset-react": "^7.23.3"
+    "@babel/preset-react": "^7.23.3",
+    "copyfiles": "^2.4.1"
   }
 }

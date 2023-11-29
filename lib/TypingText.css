@@ -1,0 +1,23 @@
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.typing-text-container {
+  display: inline-block;
+  white-space: pre-wrap;
+}
+
+.typed-text {
+  display: inline-block;
+}
+
+.blinking-cursor {
+  animation: blink 1s infinite;
+}
