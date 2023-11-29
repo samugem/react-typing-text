@@ -4,27 +4,40 @@ import "./TypingText.css";
 const TypingText = ({
   text,
   typingInterval = 100,
+  startDelay = 0,
   className = "",
   showCursor = true,
+  loop = false,
 }) => {
   const [displayedText, setDisplayedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [blinkCursor, setBlinkCursor] = useState(false);
 
   useEffect(() => {
-    if (currentIndex < text.length) {
-      const timeoutId = setTimeout(() => {
-        setDisplayedText((prevText) => prevText + text[currentIndex]);
+    const nextChar = text[currentIndex % text.length];
+
+    const timeoutId = setTimeout(() => {
+      if (currentIndex < text.length) {
+        setDisplayedText((prevText) => prevText + nextChar);
         setCurrentIndex((prevIndex) => prevIndex + 1);
-      }, typingInterval);
+      } else if (loop) {
+        setDisplayedText("");
+        setCurrentIndex(0);
+      } else {
+        setBlinkCursor(true);
+      }
+    }, typingInterval);
 
-      return () => clearTimeout(timeoutId);
-    } else {
-      setBlinkCursor(true);
-    }
+    return () => clearTimeout(timeoutId);
+  }, [currentIndex, text, typingInterval, loop]);
 
-    return () => {};
-  }, [currentIndex, text, typingInterval]);
+  useEffect(() => {
+    const delayTimeoutId = setTimeout(() => {
+      setCurrentIndex(0);
+    }, startDelay);
+
+    return () => clearTimeout(delayTimeoutId);
+  }, [startDelay]);
 
   return (
     <div className={`typing-text-container ${className}`}>
