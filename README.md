@@ -1,6 +1,11 @@
 # react-typing-text
 A React typing text component
 
+### Install
+```shell
+npm i github:samu20108/react-typing-text
+```
+
 ### Usage
 
 Enter text as a parameter
