@@ -6,8 +6,8 @@
     "build": "babel src -d src"
   },
   "peerDependencies": {
-    "react": "^16.8.0 || ^17.0.0",
-    "react-dom": "^16.8.0 || ^17.0.0"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "files": [
     "src"
@@ -22,7 +22,7 @@
   "description": "A React typing text component",
   "repository": {
     "type": "git",
-    "url": "https://github.com/samu20108/react-typing-text.git"
+    "url": "git+https://github.com/samu20108/react-typing-text.git"
   },
   "devDependencies": {
     "@babel/cli": "^7.23.4",
