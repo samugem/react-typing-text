@@ -1,5 +1,3 @@
-import React from "react";
-
 declare module "react-typing-text" {
   interface TypingTextProps {
     text: string;
@@ -12,5 +10,5 @@ declare module "react-typing-text" {
 
   const TypingText: React.FC<TypingTextProps>;
 
-  export default TypingText;
+  export = TypingText;
 }
