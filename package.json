@@ -1,0 +1,27 @@
+{
+  "name": "react-typing-text",
+  "version": "1.0.0",
+  "main": "lib/TypingText.js",
+  "scripts": {
+    "build": "babel src -d lib"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "react",
+    "component",
+    "typing-text"
+  ],
+  "author": "samu20108",
+  "license": "MIT",
+  "description": "A React typing text component",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samu20108/react-typing-text.git"
+  }
+}
