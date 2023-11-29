@@ -11,7 +11,8 @@
   },
   "files": [
     "src",
-    "lib"
+    "lib",
+    "index.d.ts"
   ],
   "keywords": [
     "react",
